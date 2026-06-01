@@ -96,45 +96,8 @@ function Ourservices() {
   ]
   return (
    <>
-   <section style={{paddingTop:"45px",paddingBottom:"45px"}}>
-   <div className="container" id='servicecontainer'>
+   <section>
    
-   <div style={{display:"flex",flexDirection:"column",gap:"10px",alignItems:"center"}}>
-   <p className='headingbg' style={{color:"white"}}>OUR SERVICES</p>
-   <h1 className='servicesheading'>Elevate Your Vision <br /> with<span className='action'> Our Expert </span> Services</h1>
-   </div>
-
-   <div className='grid grid-cols-1 lg:grid-cols-3 gap-8' style={{marginTop:"25px"}}>
-   {
-    servicesArray.map((x,y)=>{
-        return(
-            <div className='servicecard' key={x.id}>
-            <div className="iconbox">
-            <span>{x.icon}</span>
-            </div>
-            <h2 className='servicename'>{x.name}</h2>
-            <p className='text-gray-200'>{x.des}</p>
-            <div className="hrline"></div>
-            <div>
-            <p className='text-gray-200' style={{textAlign:"start"}}>What We Offer :</p>
-             <ul style={{listStyleType:"circle",display:"flex",flexDirection:"column",gap:"8px",marginTop:"8px"}}>
-            {
-                x.points.map((x,y)=>{
-                    return(
-                    <li className='text-gray-200 keypoints'>{x}</li>
-                    )
-                })
-            }
-            </ul>
-            </div>
-            <button className='learnmorebtn'>Learn More <GoArrowUpRight style={{fontSize:"18px"}}/></button>
-            </div>
-        )
-    })
-   }
-   </div>
-
-   </div>
    </section>
    </>
 

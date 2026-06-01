@@ -8,11 +8,7 @@ import InfluencerMarketing from './Components/InfluencerMarketing'
 function page() {
   return (
     <>
-    <Navbar/>
-    <HeroSection/>
-    <Clients/>
-    <Ourservices/>
-    <InfluencerMarketing/>
+   
     </>
   )
 }
