@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --seconday-font:"Playfair Display",serif
+  --seconday-font:"Poppins",sans-serif
 }
 /* HERO SECTION CSS STARTS */
 .herosecCF{
@@ -82,8 +82,36 @@ background: linear-gradient(90deg,#11c5a1,#0f7cff);
 -webkit-text-fill-color: transparent;
 position: relative;
 z-index: 2;
-font-family: var(--seconday-font);
 font-weight: bold;
+}
+#influencercontpara{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+}
+#influencercontpara p{
+  font-size: 15px;
+  line-height: 25px;
+  width: 800px;
+  text-align: center;
+}
+.specialcolor{
+background: linear-gradient(90deg,#11c5a1,#0f7cff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position: relative;
+z-index: 2;
+
+}
+@media (max-width:768px) {
+.influheading{
+    font-size: 28px;
+  }
+  #influencercontpara p{
+    width: 100%;
+    line-height: 20px;
+  }
 }
 .rankrazeheroheading
 {
@@ -94,25 +122,7 @@ font-weight: bold;
    color: white;
 }
 
-#contentherosec{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 500px;
-  
-}
-@media (max-width:768px) {
-  #contentherosec{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
 
-}
-}
-#contentherosec p{
- line-height: 30px;
-}
 .creativity
 {
   color: white;
@@ -455,9 +465,7 @@ inset 0 1px 0 rgba(255,255,255,0.7);
 
 .servicesheading{
   font-family: var(--seconday-font);
-  font-style: italic;
-  letter-spacing: 1px;
-  font-size: 36;
+ font-size: 36;
   text-align: center;
 }
 .servicecard
@@ -478,14 +486,30 @@ inset 0 1px 0 rgba(255,255,255,0.7);
   );
   color: white;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  align-items: center;
+  
+}
+@media (max-width:768px) {
+  .servicecard
+  {
+  border-radius: 20px;
+  padding: 22px 20px 18px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap:15px;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    #0ea5e9 0%,
+    #4799c2 50%,
+    #0ea5e9 100%
+  );
+  color: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   align-items: center;
-  transition: 1s;
-}
-.servicecard:hover{
-  transform: translateY(-10px);
+}  
 }
 .servicecard::before {
   content: '';
@@ -513,7 +537,6 @@ inset 0 1px 0 rgba(255,255,255,0.7);
   font-size: 20px;
 }
 .servicecard p{
-  /* text-align: center; */
   font-size: 14px;
 }
 .iconbox{
@@ -545,15 +568,29 @@ inset 0 1px 0 rgba(255,255,255,0.7);
 }
 .learnmorebtn{
   border: solid 1px white;
-  padding: 6px 12px;
+  padding: 15px 20px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-size: small;
+  font-size: 15px;
   transition: 1s;
-  align-self: flex-start;
+  width: 100%;
+}
+@media (max-width:768px) {
+  .learnmorebtn{
+  border: solid 1px white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 15px;
+  transition: 1s;
+  width: 100%;
+}
 }
 .learnmorebtn:hover{
   background-color: black;
@@ -575,25 +612,30 @@ inset 0 1px 0 rgba(255,255,255,0.7);
   padding-bottom: 45px; 
 }
 #influencermarkcontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   margin: 0px auto;
 }
 .influencermarkcontent{
  display: flex;
  flex-direction: column;
- gap: 15px ;
+ gap: 20px;
+ align-items: center;
+ justify-content: center;
 }
 .influencermarkcontent h1{
   font-family: var(--seconday-font);
    font-size: 36px;
    font-style: italic;
    color: white;
-   text-align: start;
+   text-align: center;
 }
 #influencerbtn{
   border: solid 1px white;
   padding: 8px 16px;
   border-radius: 12px;
-  align-self: flex-start;
+  
   color: white;
   font-size: small;
   transition: 1s;
@@ -607,5 +649,133 @@ inset 0 1px 0 rgba(255,255,255,0.7);
   color: white;
   border: solid 1px transparent;
   transform: scale(1.1);
+}
+.influencercard{
+   box-shadow:
+     0 0 4px rgba(0, 255, 255, 0.18),
+    0 0 10px rgba(138, 43, 226, 0.12),
+    0 0 20px rgba(255, 0, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: white;
+  transition: 1s;
+}
+.influencercard:hover{
+  transform: scale(1.1);
+}
+.influencercard h2{
+  font-size: 16px;
+}
+#influencercasestudy{
+ background: linear-gradient(
+135deg,
+#071120 0%,
+#123b7a 35%,
+#1a4c94 70%,
+#081726 100%
+);
+  padding-top: 45px;
+  padding-bottom: 45px; 
+}
+#influencercs{
+  margin: 0px auto;
+}
+.casestudycontent{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+@media (max-width:768px) {
+  .casestudycontent{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}
+.casestudycard
+{
+  box-shadow: 0 0 4px rgba(0, 255, 255, 0.18),
+    0 0 10px rgba(138, 43, 226, 0.12),
+    0 0 20px rgba(255, 0, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 300px;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: white;
+  transition: 1s;
+  max-width: 250px;
+}
+.casestudycard:hover{
+  transform: translateY(-10px);
+}
+.casestudycard h2{
+  font-size: 32px;
+}
+.growthtext{
+ background: linear-gradient(90deg,#11c5a1,#0f7cff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+position: relative;
+z-index: 2;
+font-size: 32px;
+font-weight: bold;
+}
+.casestudyexplain{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+}
+.casestudyexplain h2{
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+}
+.herbalkeypoints{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: circle;
+  padding-left: 28px;
+}
+.herbalkeypoints li{
+  color: white;
+  font-size: smaller;
+}
+.viewfullcasedtudy{
+  border: solid 1px white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 12;
+  transition: 1s;
+  color: white;
+}
+.viewfullcasedtudy:hover{
+  border: solid 1px transparent;
+  background-color: black;
+  color: white;
+  
 }
 /* INFLUENCER MARKETING CSS ENDS */

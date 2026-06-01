@@ -34,7 +34,7 @@ function HeroSection() {
     <p>AGENCY PORTFOLIO : 2025-2026</p>
     </div>
     <h1 className='rankrazeheroheading'>
-      Rankraze <span className='action'>In <br /> Action</span>
+      Crafting <span className='action'>Digital Success</span>Through <br/> Every Project
     </h1>
     <p className='creativity'>
      " Where Creativity, Technology & <br /> Strategy  Come Together "
@@ -42,11 +42,7 @@ function HeroSection() {
 
      <div id='contentherosec'>
       <p className='text-gray-300'>
-        At Rankraze, we build digital experiences that help brands grow faster, connect better, and stand out in competitive markets. Based in Chennai, Rankraze combines creativity, strategy, and technology to deliver high-impact solutions for startups, businesses, and growing enterprises across industries.
-      </p>
-
-      <p className='text-gray-300'>
-        From modern websites and high-converting landing pages to scalable web applications, branding, content creation, SEO, and performance marketing — we provide complete digital solutions under one roof.
+      Every project tells a story of how RankRaze helps businesses strengthen their digital presence and achieve sustainable growth. 
       </p>
     </div>
 

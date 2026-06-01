@@ -197,7 +197,6 @@ function Clients() {
   <div className='brandcontsnt'>
   <h1>Trusted By <span className='action'>2,100 Brands</span> Across <br /> India & Beyond</h1>
   <p className='text-gray-300' style={{textAlign:"center"}}>From Fortune 500 Companies to Fast-growing Startups - Brands That Trust Rankraze to Grow.</p>
-  <p className='text-gray-300' style={{fontSize:"smaller",textAlign:"center"}}>SHOWING  <span style={{color:"yellow"}}>28 FEATURED CLIENTS</span> - PART OF RANKRAZE'S 2,000+ BRAND PORTFOLIO</p>
   </div>
 
   {/* CLIENTS IMAGE SLIDER */}
@@ -233,8 +232,13 @@ relative overflow-hidden marqueeparent">
 
   </div>
 
+  <div>
+  <p className='text-gray-300' style={{textAlign:"center"}}>Your business could be the next success story in our portfolio. </p>
+  <button></button>
+  </div>
+
   {/* CATEGORY SECTION */}
-   <div className='' style={{display:"flex",flexDirection:"column",gap:"8px"}}>
+   {/* <div className='' style={{display:"flex",flexDirection:"column",gap:"8px"}}>
    <div style={{textAlign:"center"}}>
     <p className='brandcontentline'>Explore Brand Partners Across Multiple Industries:</p>
    </div>
@@ -288,16 +292,14 @@ relative overflow-hidden marqueeparent">
             return(
         <div key={x.id} className='min-w-[170px] h-[150px] rounded-[28px clientlogoparent'>
         <Image src={x.image} alt='clientslogo' width={130} height={80} className="" unoptimized/>
-        {/* <div className='categoryname'>
-        <p>{x.category}</p>
-        </div> */}
-        </div>
+       </div>
             )
         })
     }
     </div>
 
-   </div>
+   </div> */}
+
 
    </div>
    </section>
