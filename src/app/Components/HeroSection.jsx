@@ -54,7 +54,7 @@ function HeroSection() {
     </div>
 
     <div>
-    <Animationhero/>
+    {/* <Animationhero/> */}
     </div>
 
     </div>
