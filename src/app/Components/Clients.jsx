@@ -30,7 +30,7 @@ import client27img from '../../../public/Images/clientimg27.webp'
 import client28img from '../../../public/Images/clientimg28.webp'
 
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { FaArrowRight} from "react-icons/fa";
 
 function Clients() {
   let clientsArray=[
@@ -176,128 +176,66 @@ function Clients() {
   const secondRow = clientsArray.slice(14, 28);
   let [activeCategory,setactiveCategory]=useState("ALL")
 
-  //FILTERING CATEGORY
-  
-  let filterCategory=activeCategory==="ALL"
-  ?
-  clientsArray :
-  clientsArray.filter((x,y)=>{
-    return x.category===activeCategory
-  })
-
-  return (
+ return (
    <>
    <section className='clientscf'>
-   <div className="container" id='clientscontainer'>
    
-   <div className='' style={{display:"flex",justifyContent:"center"}}>
-   <p className='agencydiv' style={{color:"white",fontSize:"smaller"}}>OUR CLIENTS SHOWCASE</p>
+   <div className="container" id='clientscontainer'>
+
+   <div className='text-center subheading'id=''>
+   <p>OUR CLIENTS SUITCASE</p>
+   <div className="hrline"></div>
    </div>
 
-  <div className='brandcontsnt'>
-  <h1>Trusted By <span className='action'>2,100 Brands</span> Across <br /> India & Beyond</h1>
-  <p className='text-gray-300' style={{textAlign:"center"}}>From Fortune 500 Companies to Fast-growing Startups - Brands That Trust Rankraze to Grow.</p>
-  <p className='text-gray-300' style={{fontSize:"smaller",textAlign:"center"}}>SHOWING  <span style={{color:"yellow"}}>28 FEATURED CLIENTS</span> - PART OF RANKRAZE'S 2,000+ BRAND PORTFOLIO</p>
-  </div>
-
-  {/* CLIENTS IMAGE SLIDER */}
-  <div style={{marginTop:"px"}}>
+   <div className='text-center flex flex-col gap-2 sm-padding-content'>
+   <h2 className='text-4xl'>Trusted by Brands Across Industries</h2>
+   <p className='contentwrds text-gray-400'>From Fortune 500 Companies to Fast-growing Startups - Brands That Trust Rankraze to Grow.</p>
+   </div>
   
-  {/* first marquee */}
- <div className="overflow-hidden w-full py-6">
-  <div className="flex items-center gap-8 marquee">
+   <div className="logos-wrapper">
+  <div className="logos-track">
 
-{[...firstRow, ...firstRow].map((x, y) => (
-<div  key={y} className="min-w-[180px] h-[110px] rounded-[28px] flex items-center justify-center relative overflow-hidden marqueeparent">
-<Image src={x.image} alt="client" width={120}
-height={60} className="object-contain" unoptimized/>
-</div>))}
-
-  </div>
-</div>
-
-{/* second marquee */}
-<div className="overflow-hidden w-full py-6">
-<div className="flex items-center gap-8 marquee2">
-
-{[...secondRow, ...secondRow].map((x, y) => (
-<div key={y} className="min-w-[185px] h-[110px]
-rounded-[28px] flex items-center justify-center
-relative overflow-hidden marqueeparent">
-<Image src={x.image} alt="client" width={120} height={60} className="object-contain" unoptimized/>
-</div>
+    {[...firstRow, ...firstRow].map((x, index) => (
+      <div
+        key={index}
+        className="logo-card"
+      >
+        <Image
+          src={x.image}
+          alt="client"
+          width={135}
+          height={75}
+          className="object-contain"
+          unoptimized
+        />
+      </div>
     ))}
 
   </div>
-</div>
-
-  </div>
-
-  {/* CATEGORY SECTION */}
-   <div className='' style={{display:"flex",flexDirection:"column",gap:"8px"}}>
-   <div style={{textAlign:"center"}}>
-    <p className='brandcontentline'>Explore Brand Partners Across Multiple Industries:</p>
-   </div>
-   <div className='clientlogocategoryparent'>
-  
-  <div className={`${activeCategory==="ALL"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("ALL")}>
-  <p>ALL</p>
-  </div>
-
-  <div className={`${activeCategory==="HOSPITALS"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("HOSPITALS")}>
-  <p>HOSPITALS</p>
-  </div>
-
-  <div className={`${activeCategory==="INDUSTRIES"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("INDUSTRIES")}>
-  <p>INDUSTRIES</p>
-  </div>
-
-  <div className={`${activeCategory==="E-COMMMERCE"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("E-COMMMERCE")}>
-  <p>E-COMMERCE</p>
-  </div>
-
-  <div className={`${activeCategory==="RESTAURANTS"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("RESTAURANTS")}>
-  <p>RESTAURANTS</p>
-  </div>
-
-  <div className={`${activeCategory==="TRANSPORT"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("TRANSPORT")}>
-  <p>TRANSPORT</p>
-  </div>
-
-  <div className={`${activeCategory==="TRANSPORT"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("TRANSPORT")}>
-  <p>TRANSPORT</p>
-  </div>
-
-  <div className={`${activeCategory==="TRANSPORT"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("TRANSPORT")}>
-  <p>TRANSPORT</p>
-  </div>
-
-  <div className={`${activeCategory==="TRANSPORT"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("TRANSPORT")}>
-  <p>TRANSPORT</p>
-  </div>
-
-  <div className={`${activeCategory==="TRANSPORT"?"iconcategoryactive":"iconcategory"}`} onClick={()=>setactiveCategory("TRANSPORT")}>
-  <p>TRANSPORT</p>
-  </div>
-
    </div>
 
-    <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
-    {
-        filterCategory.map((x,y)=>{
-            return(
-        <div key={x.id} className='min-w-[170px] h-[150px] rounded-[28px clientlogoparent'>
-        <Image src={x.image} alt='clientslogo' width={130} height={80} className="" unoptimized/>
-        {/* <div className='categoryname'>
-        <p>{x.category}</p>
-        </div> */}
-        </div>
-            )
-        })
-    }
-    </div>
+   <div className="logos-wrapper mt-6">
+  <div className="logos-track-reverse">
 
+    {[...secondRow, ...secondRow].map((x, index) => (
+      <div
+        key={index}
+        className="logo-card">
+    <Image src={x.image} alt="client" width={120} height={60} className="object-contain"
+    unoptimized />
+      </div>
+    ))}
+
+  </div>
    </div>
+
+   <div className='text-center mt-10 sm-padding-content'>
+   <p className='contentwrds text-gray-400 '>Your Business could be the Next Success Story Featured in our Portfolio, Joining a Growing <br/> list of Brands We’ve Helped Scale, Transform, and Succeed in the Digital Space.</p>
+   </div>
+
+   {/* <div className='flex justify-center' style={{marginTop:"5px"}}>
+   <button className='getstartedbtn'>Let's Build Something Great <FaArrowRight/> </button>
+   </div> */}
 
    </div>
    </section>
